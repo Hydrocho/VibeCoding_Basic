@@ -355,7 +355,7 @@ const slidesData = [
   {
     "slide_index": 42,
     "title": "Antigravity - Live Server 설치",
-    "section": "Idea Canvas 앱 제작",
+    "section": "Live Server 실행",
     "desc": "Antigravity IDE의 확장 기능 마켓플레이스에서 Live Server를 검색하여 설치합니다.\n1. 좌측 확장 기능(Extensions) 아이콘 클릭\n2. 'Live Server' 입력 검색\n3. 리스트에서 Live Server 확인 및 'Install' 클릭하여 설치 진행",
     "actions": [],
     "tip": "Live Server는 작성 중인 HTML, CSS, JS 코드를 로컬 웹 서버로 띄워 실시간으로 변경 사항을 브라우저에 확인해 볼 수 있게 돕는 필수 개발 도구입니다."
@@ -363,7 +363,7 @@ const slidesData = [
   {
     "slide_index": 43,
     "title": "Antigravity - Live Server 실행",
-    "section": "Idea Canvas 앱 제작",
+    "section": "Live Server 실행",
     "desc": "설치된 Live Server를 사용해 내 HTML 파일을 로컬 웹 서버로 실행합니다.\n1. 우측 하단의 'Go Live' 클릭 또는 index.html 파일 우클릭\n2. 'Open with Live Server' 클릭\n3. 브라우저 창에서 로컬 서버 작동 상태 확인",
     "actions": [],
     "tip": "Live Server로 열린 브라우저 창은 코드를 수정하고 저장할 때마다 페이지가 자동으로 새로고침(Live Reload)되어 개발 속도가 매우 빨라집니다."
@@ -460,6 +460,7 @@ const sections = [
   { id: "준비하기", title: "준비하기", slides: [] },
   { id: "Git & GitHub 연동", title: "Git & GitHub 연동", slides: [] },
   { id: "Supabase 데이터베이스 구축", title: "Supabase DB 구축", slides: [] },
+  { id: "Live Server 실행", title: "Live Server 실행", slides: [] },
   { id: "Idea Canvas 앱 제작", title: "Idea Canvas 제작", slides: [] },
   { id: "스마트 칭찬 노트 앱 제작", title: "칭찬 노트 앱 제작", slides: [] }
 ];

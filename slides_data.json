@@ -361,14 +361,14 @@
   {
     "slide_index": 42,
     "title": "Antigravity - Live Server 설치",
-    "section": "Idea Canvas 앱 제작",
+    "section": "Live Server 실행",
     "desc": "Antigravity IDE의 확장 기능 마켓플레이스에서 Live Server를 검색하여 설치합니다.\n1. 좌측 확장 기능(Extensions) 아이콘 클릭\n2. 'Live Server' 입력 검색\n3. 리스트에서 Live Server 확인 및 'Install' 클릭하여 설치 진행",
     "actions": []
   },
   {
     "slide_index": 43,
     "title": "Antigravity - Live Server 실행",
-    "section": "Idea Canvas 앱 제작",
+    "section": "Live Server 실행",
     "desc": "설치된 Live Server를 사용해 내 HTML 파일을 로컬 웹 서버로 실행합니다.\n1. 우측 하단의 'Go Live' 클릭 또는 index.html 파일 우클릭\n2. 'Open with Live Server' 클릭\n3. 브라우저 창에서 로컬 서버 작동 상태 확인",
     "actions": []
   },
