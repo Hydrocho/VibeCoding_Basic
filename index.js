@@ -92,7 +92,7 @@ const slidesData = [
     "section": "Git & GitHub 연동",
     "desc": "Git Bash 터미널에 아래 명령어를 입력하여 커밋 메시지 기본 틀로 사용될 텍스트 파일을 생성합니다.",
     "actions": [
-      {"type": "cmd", "label": "gitmessage 생성 명령어", "value": 'echo "update" > ~/.gitmessage.txt'}
+      {"type": "cmd", "label": "gitmessage 생성 명령어", "value": "echo \"update\" > ~/.gitmessage.txt"}
     ],
     "tip": "이 파일은 커밋 시마다 메시지를 매번 치지 않고 빠르게 지정된 키워드로 기록하기 위한 사전 작업입니다."
   },
@@ -112,7 +112,7 @@ const slidesData = [
     "section": "Git & GitHub 연동",
     "desc": "로컬 Git 시스템에 등록할 작성자 이름을 지정합니다. 오류 방지를 위해 가급적 영문 이름 지정을 강력 권장합니다.",
     "actions": [
-      {"type": "cmd", "label": "Git 사용자 이름 설정 (변경하여 사용)", "value": 'git config --global user.name "my name"'}
+      {"type": "cmd", "label": "Git 사용자 이름 설정 (변경하여 사용)", "value": "git config --global user.name \"my name\""}
     ],
     "tip": "\"my name\" 자리에 닉네임이나 성함을 영문으로 수정하여 작성해 주세요."
   },
@@ -122,7 +122,7 @@ const slidesData = [
     "section": "Git & GitHub 연동",
     "desc": "GitHub에 가입 시 연동해 둔 이메일 주소를 로컬 Git 인증 정보로 입력합니다. (구글 메일 주소 활용 권장)",
     "actions": [
-      {"type": "cmd", "label": "Git 이메일 설정 (변경하여 사용)", "value": 'git config --global user.email "myEmail@goedu.kr"'}
+      {"type": "cmd", "label": "Git 이메일 설정 (변경하여 사용)", "value": "git config --global user.email \"myEmail@goedu.kr\""}
     ],
     "tip": "\"myEmail@goedu.kr\" 자리에 깃허브 가입용 이메일을 대입하여 명령어를 실행하세요."
   },
@@ -346,14 +346,38 @@ const slidesData = [
   },
   {
     "slide_index": 41,
-    "title": "스마트 칭찬 노트 제작 - 학습 목표",
-    "section": "스마트 칭찬 노트 앱 제작",
-    "desc": "스마트 칭찬 노트 앱을 만들어 웹상에 배포합니다. 수파베이스 데이터 연계와 교사용 대시보드 화면 연수 가이드입니다.",
+    "title": "수파베이스 - 회원 가입 기능 구현",
+    "section": "Supabase 데이터베이스 구축",
+    "desc": "개발 테스트 편의를 위해 신규 이메일 가입 시 메일 인증을 즉각 통과하도록 설정을 우회합니다.\n1. Supabase 관리 메뉴 Authentication -> Providers -> Email 선택\n2. 'Confirm email' 체크 옵션을 비활성화(OFF)\n3. 하단의 'Save changes'를 눌러 저장합니다.",
     "actions": [],
-    "tip": "스스로 맞춤형 보상 규칙을 설계하고 코딩을 통해 즉각 현장에 접목해보는 응용 가이드 과정입니다."
+    "tip": "인증 옵션을 끄지 않으면 가입한 이메일 편지함으로 가서 매번 인증 확인을 눌러야 하므로, 실습 전 꼭 확인하세요."
   },
   {
     "slide_index": 42,
+    "title": "“Idea Canvas” 주요 기능 (1)",
+    "section": "Idea Canvas 앱 제작",
+    "desc": "실시간으로 아이디어를 포스트잇 형태로 작성하고 공유할 수 있는 핵심 보드 화면을 구성합니다.",
+    "actions": [],
+    "tip": "Supabase Realtime 또는 웹소켓을 연동하여 다른 사람이 추가한 메모도 새로고침 없이 실시간으로 화면에 렌더링되게 만듭니다."
+  },
+  {
+    "slide_index": 43,
+    "title": "“Idea Canvas” 주요 기능 (2)",
+    "section": "Idea Canvas 앱 제작",
+    "desc": "생성된 아이디어 보드 화면을 다른 기기(태블릿, 모바일)나 학생들과 편리하게 공유할 수 있도록 QR 코드를 화면에 표시하고 공유 링크를 생성합니다.",
+    "actions": [],
+    "tip": "무료 QR 코드 생성 API나 라이브러리를 사용해 웹앱 내에서 동적으로 현재 보드의 URL을 QR 이미지로 렌더링해 줍니다."
+  },
+  {
+    "slide_index": 44,
+    "title": "“Idea Canvas” 주요 기능 (3)",
+    "section": "Idea Canvas 앱 제작",
+    "desc": "교사가 작성된 전체 아이디어 목록을 모니터링하고, 메모를 관리(정렬, 삭제 등)할 수 있는 관리자 화면을 구성합니다.",
+    "actions": [],
+    "tip": "로그인한 사용자의 역할(Role)이나 이메일 주소를 체크하여 교사인 경우에만 관리 버튼과 대시보드가 보이도록 권한을 통제합니다."
+  },
+  {
+    "slide_index": 45,
     "title": "주요 기능 (1) 로그인 & 가입",
     "section": "스마트 칭찬 노트 앱 제작",
     "desc": "학생과 교사가 개별 회원 가입을 하고 개인 계정별로 데이터 공간에 로그인해 접속하는 기능을 구현합니다.",
@@ -361,7 +385,7 @@ const slidesData = [
     "tip": "수파베이스에서 내장 제공하는 Email Auth 솔루션을 차용해 계정별 보안 접근을 안전하게 관리합니다."
   },
   {
-    "slide_index": 43,
+    "slide_index": 46,
     "title": "주요 기능 (2) 아바타 & 펫 뽑기",
     "section": "스마트 칭찬 노트 앱 제작",
     "desc": "교실 활동에 기여해 모은 칭찬 포인트를 소모해 랜덤으로 아바타나 동물을 수집하는 게임 요소를 구현합니다.",
@@ -369,7 +393,7 @@ const slidesData = [
     "tip": "학생들이 웹앱에 흥미를 느끼고 더 적극적으로 참여할 수 있도록 돕는 게이미피케이션(Gamification) 요소입니다."
   },
   {
-    "slide_index": 44,
+    "slide_index": 47,
     "title": "주요 기능 (3) 교사용 대시보드",
     "section": "스마트 칭찬 노트 앱 제작",
     "desc": "교사는 전체 학생들의 칭찬 내역 확인, 점수별 랭킹 보기, 수기 점수 조정이 가능한 통합 통계 대시보드를 운용합니다.",
@@ -377,20 +401,12 @@ const slidesData = [
     "tip": "대시보드는 교사의 피드백 시간을 획기적으로 줄여주며 효율적인 모둠 관리를 가능하게 합니다."
   },
   {
-    "slide_index": 45,
+    "slide_index": 48,
     "title": "주요 기능 (4) 실시간 DB 운영",
     "section": "스마트 칭찬 노트 앱 제작",
     "desc": "Supabase와 실시간 통신하여 데이터를 유지합니다. 새로고침해도 학생들의 정보가 휘발되지 않도록 제어합니다.",
     "actions": [],
     "tip": "웹 브라우저의 LocalStorage를 넘어 온라인 클라우드 데이터 영속성 관리를 체험하는 단계입니다."
-  },
-  {
-    "slide_index": 46,
-    "title": "교사 가입 및 이메일 확인 우회 설정",
-    "section": "스마트 칭찬 노트 앱 제작",
-    "desc": "개발 테스트 편의를 위해 신규 이메일 가입 시 메일 인증을 즉각 통과하도록 설정을 우회합니다.\n1. Supabase 관리 메뉴 Authentication -> Providers -> Email 선택\n2. 'Confirm email' 체크 옵션을 비활성화(OFF)\n3. 하단의 'Save changes'를 눌러 저장합니다.",
-    "actions": [],
-    "tip": "인증 옵션을 끄지 않으면 가입한 이메일 편지함으로 가서 매번 인증 확인을 눌러야 하므로, 실습 전 꼭 확인하세요."
   }
 ];
 
@@ -428,6 +444,7 @@ const sections = [
   { id: "준비하기", title: "준비하기", slides: [] },
   { id: "Git & GitHub 연동", title: "Git & GitHub 연동", slides: [] },
   { id: "Supabase 데이터베이스 구축", title: "Supabase DB 구축", slides: [] },
+  { id: "Idea Canvas 앱 제작", title: "Idea Canvas 제작", slides: [] },
   { id: "스마트 칭찬 노트 앱 제작", title: "칭찬 노트 앱 제작", slides: [] }
 ];
 

@@ -10,7 +10,7 @@
     "slide_index": 2,
     "title": "Antigravity IDE 설치 - 다운로드",
     "section": "준비하기",
-    "desc": "Antigravity IDE 다운로드 주소를 확인하고 웹브라우저로 이동합니다.",
+    "desc": "Antigravity IDE 다운로드 주소를 확인하고 웹브라우저로 이동합니다. 설치 파일을 내려받습니다.",
     "actions": [
       {
         "type": "link",
@@ -23,28 +23,28 @@
     "slide_index": 3,
     "title": "Antigravity IDE 설치 - 확인",
     "section": "준비하기",
-    "desc": "설치 프로그램 다운로드가 완료된 후 설치를 시작합니다.",
+    "desc": "설치 프로그램 다운로드가 완료된 후 설치를 시작합니다. 안내에 따라 설치 완료 화면까지 확인합니다.",
     "actions": []
   },
   {
     "slide_index": 4,
     "title": "Antigravity IDE 설치 - 폴더 생성",
     "section": "준비하기",
-    "desc": "바이브 코딩 프로젝트를 진행할 컴퓨터 내의 새로운 작업 폴더를 생성합니다.",
+    "desc": "바이브 코딩 프로젝트를 진행할 컴퓨터 내의 새로운 작업 폴더를 생성하고 IDE에서 로드합니다.",
     "actions": []
   },
   {
     "slide_index": 5,
     "title": "Antigravity - Git 연계 (1) 클릭",
     "section": "Git & GitHub 연동",
-    "desc": "Antigravity IDE 내에서 Git과의 연동 설정을 시작합니다.",
+    "desc": "Antigravity IDE 내에서 Git과의 연동 설정을 시작합니다. 하단 상태 표시줄의 Git 상태창을 선택합니다.",
     "actions": []
   },
   {
     "slide_index": 6,
     "title": "Antigravity - Git 연계 (2) winget 설치",
     "section": "Git & GitHub 연동",
-    "desc": "Git이 설치되어 있지 않은 경우, 터미널(Terminal)에서 아래 명령어를 실행하여 설치합니다.",
+    "desc": "Git이 설치되어 있지 않은 경우, 터미널(Terminal)에서 아래 명령어를 복사하여 실행합니다.",
     "actions": [
       {
         "type": "cmd",
@@ -57,7 +57,7 @@
     "slide_index": 7,
     "title": "Antigravity - Git 연계 (3) 붙여넣기",
     "section": "Git & GitHub 연동",
-    "desc": "복사한 winget 명령어를 터미널 창에 붙여넣고 엔터(Enter)를 입력합니다.",
+    "desc": "복사한 winget 명령어를 IDE 내부의 터미널 창에 붙여넣고 엔터(Enter)를 입력해 실시간 다운로드를 개시합니다.",
     "actions": [
       {
         "type": "cmd",
@@ -70,28 +70,28 @@
     "slide_index": 8,
     "title": "Antigravity - Git 연계 (4) 설치 대기",
     "section": "Git & GitHub 연동",
-    "desc": "Git 설치 과정이 터미널 화면에서 진행되므로 잠시 기다립니다.",
+    "desc": "Git 설치 과정이 터미널 화면에서 진행되므로 100% 완료 메시지가 나타날 때까지 잠시 기다립니다.",
     "actions": []
   },
   {
     "slide_index": 9,
     "title": "Antigravity - Git 연계 (5) 재실행",
     "section": "Git & GitHub 연동",
-    "desc": "Git 설치 완료 후, Antigravity IDE에서 'Close Folder'를 클릭하여 폴더를 닫았다가 다시 열어줍니다.",
+    "desc": "Git 설치 완료 후, Antigravity IDE 메뉴에서 'Close Folder'를 클릭하여 폴더를 닫았다가 다시 열어 동기화 환경을 갱신합니다.",
     "actions": []
   },
   {
     "slide_index": 10,
     "title": "Antigravity - Git 초기화 (1) 터미널 설정",
     "section": "Git & GitHub 연동",
-    "desc": "우측 상단 클릭 후 Git Bash 터미널을 활성화합니다.",
+    "desc": "우측 상단 쉘 선택 드롭다운 메뉴를 클릭한 후 Git Bash 터미널을 활성화합니다.",
     "actions": []
   },
   {
     "slide_index": 11,
     "title": "Antigravity - Git 초기화 (2) gitmessage 파일 생성",
     "section": "Git & GitHub 연동",
-    "desc": "Git Bash 터미널에 아래 명령어를 입력하여 커밋 템플릿용 gitmessage 파일을 생성합니다.",
+    "desc": "Git Bash 터미널에 아래 명령어를 입력하여 커밋 메시지 기본 틀로 사용될 텍스트 파일을 생성합니다.",
     "actions": [
       {
         "type": "cmd",
@@ -104,7 +104,7 @@
     "slide_index": 12,
     "title": "Antigravity - Git 초기화 (3) 커밋 템플릿 지정",
     "section": "Git & GitHub 연동",
-    "desc": "커밋 메시지 작성 템플릿으로 방금 생성한 텍스트 파일을 설정합니다.",
+    "desc": "커밋 메시지 작성 템플릿 파일의 글로벌 경로로 방금 생성한 텍스트 파일을 지정하여 설정합니다.",
     "actions": [
       {
         "type": "cmd",
@@ -117,7 +117,7 @@
     "slide_index": 13,
     "title": "Antigravity - Git 초기화 (4) 사용자 이름 지정",
     "section": "Git & GitHub 연동",
-    "desc": "로컬 Git 계정에 사용할 사용자 이름을 입력합니다. (오류 방지를 위해 영어 이름 입력을 추천합니다)",
+    "desc": "로컬 Git 시스템에 등록할 작성자 이름을 지정합니다. 오류 방지를 위해 가급적 영문 이름 지정을 강력 권장합니다.",
     "actions": [
       {
         "type": "cmd",
@@ -130,7 +130,7 @@
     "slide_index": 14,
     "title": "Antigravity - Git 초기화 (5) 사용자 이메일 지정",
     "section": "Git & GitHub 연동",
-    "desc": "GitHub에 가입 시 연동할 이메일 주소를 입력합니다. (구글 이메일 추천)",
+    "desc": "GitHub에 가입 시 연동해 둔 이메일 주소를 로컬 Git 인증 정보로 입력합니다. (구글 메일 주소 활용 권장)",
     "actions": [
       {
         "type": "cmd",
@@ -143,94 +143,100 @@
     "slide_index": 15,
     "title": "Antigravity - GitHub 연계 (1) 로그인",
     "section": "Git & GitHub 연동",
-    "desc": "Antigravity IDE 하단의 파란색 바에서 GitHub 아이콘을 클릭하여 로그인을 진행합니다.",
+    "desc": "Antigravity IDE 하단의 파란색 상태바에 표시되는 GitHub 프로필 아이콘을 클릭해 연동 과정을 시작합니다.",
     "actions": []
   },
   {
     "slide_index": 16,
     "title": "Antigravity - GitHub 연계 (2) 로그인 권한 승인",
     "section": "Git & GitHub 연동",
-    "desc": "웹 브라우저가 열리면 GitHub 연동 권한 승인을 클릭합니다.",
+    "desc": "인증 승인 웹 브라우저 창이 열리면 녹색 'Authorize' 버튼을 눌러 연동 상태를 승인해 줍니다.",
     "actions": []
   },
   {
     "slide_index": 17,
     "title": "Antigravity - GitHub 연계 (3) 인증 대기",
     "section": "Git & GitHub 연동",
-    "desc": "브라우저에서 로그인 성공을 확인한 뒤 Antigravity IDE 창으로 돌아옵니다.",
+    "desc": "브라우저 화면 상에 로그인 성공 체크 표시가 확인되면, 웹 창을 닫고 다시 IDE 창으로 포커스를 옮겨옵니다.",
     "actions": []
   },
   {
     "slide_index": 18,
     "title": "Antigravity - GitHub 연계 (4) 저장소 생성",
     "section": "Git & GitHub 연동",
-    "desc": "GitHub 저장소(Repository) 생성을 위한 메뉴를 클릭합니다.",
+    "desc": "GitHub 온라인 서버 상에 코드를 보관할 빈 저장소(Repository) 공간을 생성하는 버튼을 누릅니다.",
     "actions": []
   },
   {
     "slide_index": 19,
     "title": "Antigravity - GitHub 연계 (5) 연동 대기",
     "section": "Git & GitHub 연동",
-    "desc": "프로젝트가 GitHub와 동기화되는 동안 기다립니다.",
+    "desc": "로컬 프로젝트와 원격 깃허브 서버 연결이 백그라운드 환경에서 정합성을 맞추는 것을 지켜봅니다.",
     "actions": []
   },
   {
     "slide_index": 20,
     "title": "Antigravity - GitHub 연계 (6) 링크 복사",
     "section": "Git & GitHub 연동",
-    "desc": "GitHub 저장소 연계 성공 알림창이 나타나면 원격 저장소 링크 복사 버튼을 누릅니다.",
+    "desc": "원격 동기화가 끝나고 제공되는 해당 GitHub 레포지토리의 최종 웹 링크 주소를 복사 버튼을 눌러 확보합니다.",
     "actions": []
   },
   {
     "slide_index": 21,
     "title": "Antigravity - GitHub 연계 (7) 커밋/푸시",
     "section": "Git & GitHub 연동",
-    "desc": "커밋 메시지 작성 후 GitHub에 로컬 코드를 푸시(Upload)합니다.",
+    "desc": "수정 내용을 기록할 메시지를 남긴 후, 푸시(Upload) 버튼을 눌러 온라인 깃허브 클라우드로 업로드합니다.",
     "actions": []
   },
   {
     "slide_index": 22,
     "title": "GitHub 자동 업로드 - Public 선택",
     "section": "Git & GitHub 연동",
-    "desc": "GitHub Repository 초기 생성 시 저장소 공개 여부를 반드시 **Public**(공개)으로 설정해야 웹에 무료 배포할 수 있습니다.",
+    "desc": "GitHub Repository 신규 설정 단계에서 프로젝트 공개 범위 옵션을 꼭 **Public**(전체 공개)으로 설정합니다.",
     "actions": []
   },
   {
     "slide_index": 23,
     "title": "GitHub 자동 업로드 - 확인",
     "section": "Git & GitHub 연동",
-    "desc": "동기화가 설정되어 이후 파일 변경 시 깃허브로 자동 푸시됩니다.",
+    "desc": "로컬에서 파일을 새로 생성하거나 수정하고 저장할 때마다 GitHub에 자동으로 변경 분이 감지되어 백업됩니다.",
     "actions": []
   },
   {
     "slide_index": 24,
-    "title": "GitHub Pages 활성화 방법",
+    "title": "GitHub Pages 웹 주소 활성화 방법",
     "section": "Git & GitHub 연동",
-    "desc": "생성된 웹앱을 전 세계에서 접속할 수 있는 웹 페이지로 런칭합니다.\n1. Settings 클릭\n2. Pages 클릭\n3. Build and deployment - Source에서 Deploy from a branch 선택\n4. Branch: None -> main 선택\n5. Save 클릭 후 2~3분 대기",
-    "actions": []
+    "desc": "코딩된 정적 웹앱을 외부 접속용 주소로 배포합니다.\n1. GitHub 레포 Settings 탭 클릭\n2. Pages 카테고리 클릭\n3. Build and deployment - Branch를 None에서 main으로 토글 변경\n4. 우측 Save 클릭 후 2~3분간 배포 완료 대기",
+    "actions": [
+      {
+        "type": "link",
+        "label": "GitHub 바로가기",
+        "value": "https://github.com/"
+      }
+    ]
   },
   {
     "slide_index": 25,
     "title": "GitHub Pages 배포 주소 확인",
     "section": "Git & GitHub 연동",
-    "desc": "배포 완료 후 활성화된 링크를 복사하여 학생들과 공유합니다. (예시 주소)",
+    "desc": "빌드가 끝나면 상단에 활성화 완료 링크가 생성됩니다. 해당 주소를 눌러 웹 사이트 작동 상태를 최종 점검합니다.",
     "actions": [
       {
         "type": "link",
-        "label": "예시 웹 주소",
+        "label": "교사 깃허브 페이지 예시 주소",
         "value": "https://teachercode.github.io/BingoApp/"
       }
     ]
   },
   {
     "slide_index": 26,
-    "title": "Supabase 가입 및 로그인",
+    "title": "Supabase 데이터베이스 가입",
     "section": "Supabase 데이터베이스 구축",
-    "desc": "실시간 데이터베이스(DB)로 사용될 Supabase 공식 홈페이지로 이동해 회원 가입을 진행합니다.",
+    "desc": "칭찬 내용 및 학생 정보 저장을 처리하기 위해, 무료 클라우드 백엔드 Supabase 사이트로 이동해 계정을 만듭니다.",
     "actions": [
       {
         "type": "link",
-        "label": "Supabase 사이트",
+        "label": "Supabase 홈페이지 바로가기",
         "value": "https://supabase.com/"
       }
     ]
@@ -239,11 +245,11 @@
     "slide_index": 27,
     "title": "Supabase - 깃허브 연동 로그인",
     "section": "Supabase 데이터베이스 구축",
-    "desc": "Sign in with GitHub을 클릭하여 가입해 둔 GitHub 계정으로 간편 로그인합니다.",
+    "desc": "웹 우측 상단 Sign in을 눌러 Sign In with GitHub를 활용해 간편 연결 가입합니다.",
     "actions": [
       {
         "type": "link",
-        "label": "Supabase 사이트",
+        "label": "Supabase 홈페이지 바로가기",
         "value": "https://supabase.com/"
       }
     ]
@@ -252,21 +258,21 @@
     "slide_index": 28,
     "title": "Supabase - 대시보드 입장",
     "section": "Supabase 데이터베이스 구축",
-    "desc": "처음 로그인에 성공한 뒤, 메인 대시보드 버튼을 클릭합니다.",
+    "desc": "로그인이 끝나면 수파베이스 메인 대시보드로 이동할 준비를 하고 관리자 화면으로 들어갑니다.",
     "actions": []
   },
   {
     "slide_index": 29,
     "title": "Supabase - 새 프로젝트 생성 시작",
     "section": "Supabase 데이터베이스 구축",
-    "desc": "+ New Project 버튼을 눌러 프로젝트 생성을 시작합니다.",
+    "desc": "가운데 표시되는 '+ New Project' 버튼을 눌러 실습용 DB 프로젝트 설정을 개시합니다.",
     "actions": []
   },
   {
     "slide_index": 30,
     "title": "Supabase - 프로젝트 상세 설정",
     "section": "Supabase 데이터베이스 구축",
-    "desc": "프로젝트명은 idea-canvas로 입력하고, 보안을 위한 강력한 DB 암호를 지정합니다.",
+    "desc": "프로젝트 이름을 idea-canvas로 적고 암호를 입력합니다. 아래로 스크롤하여 계속 진행합니다.",
     "actions": [
       {
         "type": "text",
@@ -279,118 +285,126 @@
     "slide_index": 31,
     "title": "Supabase - 프로젝트 생성 완료",
     "section": "Supabase 데이터베이스 구축",
-    "desc": "Create new project를 누르면 서버가 할당되어 DB 생성이 시작됩니다 (약 1~2분 소요).",
+    "desc": "설정을 확인한 뒤 'Create new project' 녹색 버튼을 누릅니다. 시스템 프로비저닝 완료까지 잠시 기다립니다.",
     "actions": []
   },
   {
     "slide_index": 32,
     "title": "웹앱과 DB 연동 - 대시보드",
     "section": "Supabase 데이터베이스 구축",
-    "desc": "생성된 DB 설정을 웹 페이지 소스 코드에 연결하기 위해 대시보드 설정에 접근합니다.",
+    "desc": "생성 완료된 수파베이스 프로젝트의 연동 키값 확인을 위해 프로젝트 메인 홈으로 포커스를 둡니다.",
     "actions": []
   },
   {
     "slide_index": 33,
     "title": "웹앱과 DB 연동 - Org 선택",
     "section": "Supabase 데이터베이스 구축",
-    "desc": "대시보드 내에서 본인의 Organization(기관) 영역으로 이동합니다.",
+    "desc": "좌측 대시보드 메뉴 중에서 본인의 상위 Organization(기관) 탭 폴더 영역을 선택해 줍니다.",
     "actions": []
   },
   {
     "slide_index": 34,
     "title": "웹앱과 DB 연동 - 프로젝트 선택",
     "section": "Supabase 데이터베이스 구축",
-    "desc": "연결하고자 하는 'idea-canvas' 프로젝트 카드를 클릭합니다.",
+    "desc": "생성 작업이 끝난 목록의 'idea-canvas' 프로젝트 카드를 클릭하여 셋팅 페이지에 접속합니다.",
     "actions": []
   },
   {
     "slide_index": 35,
     "title": "웹앱과 DB 연동 - API URL 복사",
     "section": "Supabase 데이터베이스 구축",
-    "desc": "프로젝트 설정 메뉴 중 Integrations -> Data API 항목을 선택하고 고유 API URL 주소를 복사합니다.",
+    "desc": "프로젝트 설정 -> Integrations -> Data API 카테고리에 있는 내 서버 고유 API URL 주소를 복사해 둡니다.",
     "actions": []
   },
   {
     "slide_index": 36,
     "title": "웹앱과 DB 연동 - API URL 붙여넣기",
     "section": "Supabase 데이터베이스 구축",
-    "desc": "프로젝트의 `supabase_config.js` 파일을 열고, 복사한 API URL 주소를 따옴표 안에 붙여넣습니다. (co 뒤쪽 영역의 경로가 중복되지 않도록 잘 정돈합니다)",
+    "desc": "웹앱 폴더의 `supabase_config.js`를 열어 `SUPABASE_URL`에 복사한 주소를 넣어 셋팅합니다.",
     "actions": []
   },
   {
     "slide_index": 37,
     "title": "웹앱과 DB 연동 - API Key 복사",
     "section": "Supabase 데이터베이스 구축",
-    "desc": "Project Settings -> API 메뉴로 이동해 외부 웹앱 연동에 필요한 Publishable key (anon public key)를 복사합니다.",
+    "desc": "Project Settings -> API 메뉴로 이동해 anon public key(Publishable Key)를 찾고 키 복사를 수행합니다.",
     "actions": []
   },
   {
     "slide_index": 38,
     "title": "웹앱과 DB 연동 - API Key 붙여넣기",
     "section": "Supabase 데이터베이스 구축",
-    "desc": "프로젝트의 `supabase_config.js` 파일에서 `SUPABASE_KEY`에 해당하는 큰 따옴표 안에 복사한 API Key 값을 입력합니다.",
+    "desc": "`supabase_config.js`에서 복사한 API Key를 `SUPABASE_KEY`에 대입하여 파일의 최종 저장을 완료합니다.",
     "actions": []
   },
   {
     "slide_index": 39,
     "title": "Supabase SQL Editor 입장",
     "section": "Supabase 데이터베이스 구축",
-    "desc": "데이터를 저장할 테이블 구조를 정의하기 위해 Supabase 왼쪽 메뉴의 SQL Editor를 클릭합니다.",
+    "desc": "데이터를 저장할 테이블 구조를 선언해 주기 위해 수파베이스 좌측 사이드바의 SQL Editor 탭으로 들어갑니다.",
     "actions": []
   },
   {
     "slide_index": 40,
     "title": "Supabase SQL 실행 및 테이블 생성",
     "section": "Supabase 데이터베이스 구축",
-    "desc": "우측 SQL Query 창에 칭찬 노트를 실행하기 위해 미리 정의한 데이터베이스 테이블 생성 스크립트(SQL)를 붙여넣고 Run 버튼을 누릅니다. Success가 나오는지 확인합니다.",
-    "actions": [
-      {
-        "type": "sql",
-        "label": "칭찬 노트 DB 테이블 생성 SQL 복사",
-        "value": "-- 1. 학생 프로필 테이블 생성 (Profiles table for students)\ncreate table public.profiles (\n  id uuid references auth.users not null primary key,\n  student_name text not null,\n  points integer default 0,\n  avatar_url text,\n  mypet_url text,\n  created_at timestamp with time zone default timezone('utc'::text, now()) not null\n);\n\n-- 2. 칭찬 내역 기록 테이블 생성 (Praise notes table)\ncreate table public.praises (\n  id bigint generated by default as identity primary key,\n  student_id uuid references auth.users not null,\n  student_name text not null,\n  content text not null,\n  points integer not null,\n  created_at timestamp with time zone default timezone('utc'::text, now()) not null\n);\n\n-- 3. Row Level Security (RLS) 활성화\nalter table public.profiles enable row level security;\nalter table public.praises enable row level security;\n\n-- 4. RLS 정책 설정 (Security Policies)\n-- 모든 사용자(학생, 교사)가 모든 프로필을 조회 가능하도록 설정\ncreate policy \"Allow read profiles\" on public.profiles for select using (true);\n\n-- 본인의 프로필만 추가/수정 가능하도록 설정\ncreate policy \"Allow insert user profile\" on public.profiles for insert with check (auth.uid() = id);\ncreate policy \"Allow update user profile\" on public.profiles for update using (auth.uid() = id);\n\n-- 모든 사용자가 모든 칭찬 기록을 조회 가능하도록 설정\ncreate policy \"Allow read praises\" on public.praises for select using (true);\n\n-- 본인의 칭찬 기록만 작성 가능하도록 설정\ncreate policy \"Allow insert user praises\" on public.praises for insert with check (auth.uid() = student_id);\n"
-      }
-    ]
+    "desc": "IDE 작업 공간에 자동 생성된 setup.sql 파일의 코드를 복사하여, SQL Query 에디터 창에 붙여넣고 Run을 누릅니다. Success가 나오는지 확인합니다.",
+    "actions": []
   },
   {
     "slide_index": 41,
-    "title": "스마트 칭찬 노트 제작 - 학습 목표",
-    "section": "스마트 칭찬 노트 앱 제작",
-    "desc": "스마트 칭찬 노트 웹앱을 개발하여 인터넷 공간에 배포합니다.\n1. Supabase를 활용하여 데이터베이스에 실시간으로 학생들의 칭찬을 기록합니다.\n2. 교사 전용 로그인 및 결과 통계를 모아보는 대시보드 화면을 개발합니다.",
+    "title": "수파베이스 - 회원 가입 기능 구현",
+    "section": "Supabase 데이터베이스 구축",
+    "desc": "개발 테스트 편의를 위해 신규 이메일 가입 시 메일 인증을 즉각 통과하도록 설정을 우회합니다.\n1. Supabase 관리 메뉴 Authentication -> Providers -> Email 선택\n2. 'Confirm email' 체크 옵션을 비활성화(OFF)\n3. 하단의 'Save changes'를 눌러 저장합니다.",
     "actions": []
   },
   {
     "slide_index": 42,
-    "title": "주요 기능 (1) 로그인 & 가입",
-    "section": "스마트 칭찬 노트 앱 제작",
-    "desc": "학생과 교사가 개별 회원 가입을 하고 개인 데이터 공간에 접근할 수 있도록 로그인 환경을 구축합니다.",
+    "title": "“Idea Canvas” 주요 기능 (1)",
+    "section": "Idea Canvas 앱 제작",
+    "desc": "실시간으로 아이디어를 포스트잇 형태로 작성하고 공유할 수 있는 핵심 보드 화면을 구성합니다.",
     "actions": []
   },
   {
     "slide_index": 43,
-    "title": "주요 기능 (2) 아바타 & 펫 뽑기",
-    "section": "스마트 칭찬 노트 앱 제작",
-    "desc": "교실 칭찬 점수(보상)를 적립한 뒤 점수에 비례하여 커스텀 아바타 또는 귀여운 펫을 랜덤 뽑기하여 마이룸을 꾸밀 수 있게 동기부여 요소를 설계합니다.",
+    "title": "“Idea Canvas” 주요 기능 (2)",
+    "section": "Idea Canvas 앱 제작",
+    "desc": "생성된 아이디어 보드 화면을 다른 기기(태블릿, 모바일)나 학생들과 편리하게 공유할 수 있도록 QR 코드를 화면에 표시하고 공유 링크를 생성합니다.",
     "actions": []
   },
   {
     "slide_index": 44,
-    "title": "주요 기능 (3) 교사용 대시보드",
-    "section": "스마트 칭찬 노트 앱 제작",
-    "desc": "교사는 전체 학생 목록, 누적 칭찬 점수 순위, 일별/주간별 작성 내역 현황 등을 대시보드 한눈에 볼 수 있도록 시각화 화면을 구성합니다.",
+    "title": "“Idea Canvas” 주요 기능 (3)",
+    "section": "Idea Canvas 앱 제작",
+    "desc": "교사가 작성된 전체 아이디어 목록을 모니터링하고, 메모를 관리(정렬, 삭제 등)할 수 있는 관리자 화면을 구성합니다.",
     "actions": []
   },
   {
     "slide_index": 45,
-    "title": "주요 기능 (4) 실시간 DB 연동",
+    "title": "주요 기능 (1) 로그인 & 가입",
     "section": "스마트 칭찬 노트 앱 제작",
-    "desc": "Supabase Auth(인증)와 Database(테이블)가 실시간으로 통신해 앱을 새로고침하더라도 데이터가 유지되게 합니다.",
+    "desc": "학생과 교사가 개별 회원 가입을 하고 개인 계정별로 데이터 공간에 로그인해 접속하는 기능을 구현합니다.",
     "actions": []
   },
   {
     "slide_index": 46,
-    "title": "교사 회원 가입 및 이메일 승인 우회",
+    "title": "주요 기능 (2) 아바타 & 펫 뽑기",
     "section": "스마트 칭찬 노트 앱 제작",
-    "desc": "개발 테스트 단계에서 매번 이메일 인증 절차를 거치지 않고 곧바로 로그인될 수 있게 우회 설정을 활성화합니다.\n1. Authentication -> Sign In / Providers 메뉴\n2. Email 항목 클릭 후 Confirm email 옵션을 OFF로 비활성화\n3. Save changes 클릭",
+    "desc": "교실 활동에 기여해 모은 칭찬 포인트를 소모해 랜덤으로 아바타나 동물을 수집하는 게임 요소를 구현합니다.",
+    "actions": []
+  },
+  {
+    "slide_index": 47,
+    "title": "주요 기능 (3) 교사용 대시보드",
+    "section": "스마트 칭찬 노트 앱 제작",
+    "desc": "교사는 전체 학생들의 칭찬 내역 확인, 점수별 랭킹 보기, 수기 점수 조정이 가능한 통합 통계 대시보드를 운용합니다.",
+    "actions": []
+  },
+  {
+    "slide_index": 48,
+    "title": "주요 기능 (4) 실시간 DB 운영",
+    "section": "스마트 칭찬 노트 앱 제작",
+    "desc": "Supabase와 실시간 통신하여 데이터를 유지합니다. 새로고침해도 학생들의 정보가 휘발되지 않도록 제어합니다.",
     "actions": []
   }
 ]
