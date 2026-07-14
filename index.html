@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>바이브 코딩 - 교실 맞춤형 개발 가이드</title>
+  <link rel="stylesheet" href="index.css">
+  <!-- Feather Icons for modern sleek icon designs -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Table of Contents -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>바이브 코딩</h1>
+        <p>교사가 직접 설계하는 맞춤형 교실</p>
+      </div>
+      <div class="toc-container" id="toc-container">
+        <!-- Rendered dynamically by index.js -->
+      </div>
+    </aside>
+
+    <!-- Main Content Viewport -->
+    <main class="main-content">
+      
+      <!-- Top Navigation & Tab Bar -->
+      <header class="top-bar">
+        <div class="top-bar-title" style="gap: 15px;">
+          <button class="icon-toggle-btn" id="btn-toggle-sidebar" title="목차 토글" onclick="toggleSidebar()">
+            <i data-feather="menu"></i>
+          </button>
+          <span class="section-tag" id="active-section">준비하기</span>
+          <h2 id="active-slide-title">바이브 코딩 - 오프닝</h2>
+        </div>
+        
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <!-- Keyboard shortcut indicator -->
+          <div class="keyboard-guide">
+            <span>단축키: <kbd class="key-tag">←</kbd><kbd class="key-tag">→</kbd> 이동 | <kbd class="key-tag">M</kbd> 목차 | <kbd class="key-tag">D</kbd> 설명</span>
+          </div>
+          
+          <div class="tab-buttons">
+            <button class="tab-btn active" onclick="switchTab('presentation')">발표 슬라이드</button>
+            <button class="tab-btn" onclick="switchTab('copycenter')">자료 복사 센터</button>
+          </div>
+
+          <button class="icon-toggle-btn" id="btn-toggle-details" title="설명 패널 토글" onclick="toggleDetails()">
+            <i data-feather="sidebar"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- Panel Container -->
+      <div class="workspace-panels">
+        
+        <!-- Tab 1: Presentation & Details -->
+        <section class="panel panel-presentation active" id="panel-presentation">
+          
+          <!-- Slide Image Frame -->
+          <div class="slide-viewport">
+            <div class="slide-wrapper" id="slide-wrapper">
+              <img src="slides/slide_001.png" alt="Slide" class="slide-image" id="slide-img">
+              
+              <!-- Floating Top Controls -->
+              <div class="slide-overlay">
+                <button class="overlay-btn" id="btn-fullscreen" title="전체화면 (F)">
+                  <i data-feather="maximize-2"></i>
+                </button>
+              </div>
+            </div>
+            
+            <!-- Bottom Controls -->
+            <div class="control-bar">
+              <span class="slide-counter" id="slide-counter">1 / 46</span>
+              
+              <div class="progress-container" onclick="handleProgressClick(event)">
+                <div class="progress-bar-fill" id="progress-bar"></div>
+                <div class="autoplay-timer-bar" id="timer-bar"></div>
+              </div>
+              
+              <div class="navigation-controls">
+                <button class="control-btn" onclick="toggleAutoplay()" id="btn-autoplay" title="자동 재생">
+                  <i data-feather="play"></i> Auto
+                </button>
+                <button class="control-btn" onclick="prevSlide()" title="이전 슬라이드 (Left Arrow)">
+                  <i data-feather="chevron-left"></i> 이전
+                </button>
+                <button class="control-btn" onclick="nextSlide()" title="다음 슬라이드 (Right Arrow / Space)">
+                  다음 <i data-feather="chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide Text & Copy Cards -->
+          <div class="slide-details">
+            <div class="detail-header">
+              <h3 id="detail-title">바이브 코딩 - 오프닝</h3>
+              <p class="detail-desc" id="detail-desc">
+                교사가 직접 설계하는 맞춤형 교실. 명인중학교 교사 조광근.
+              </p>
+            </div>
+            
+            <div class="action-section">
+              <h4 class="action-section-title" id="action-title">관련 링크 및 명령어</h4>
+              <div id="slide-actions-list">
+                <!-- Action copy cards will be injected here -->
+              </div>
+            </div>
+            
+            <!-- Tip panel -->
+            <div class="info-card">
+              <h4><i data-feather="info" style="width: 16px; height: 16px;"></i> 바이브 코딩 TIP</h4>
+              <p id="tip-content">Antigravity IDE와 Supabase를 활용하여 교사가 개발 지식 없이도 단 몇 분만에 나만의 스마트 칭찬 노트를 제작하고 배포할 수 있는 실습 가이드입니다.</p>
+            </div>
+          </div>
+          
+        </section>
+
+        <!-- Tab 2: Copy Center -->
+        <section class="panel panel-copycenter" id="panel-copycenter">
+          <div class="copycenter-container">
+            <div class="copycenter-header">
+              <h2>자료 복사 센터 (Copy Center)</h2>
+              <p>바이브 코딩 연수 과정 중에 사용되는 핵심 주소와 터미널 명령어, SQL 데이터베이스 코드를 모아두었습니다. 버튼을 누르면 즉시 클립보드에 복사됩니다.</p>
+            </div>
+            
+            <div class="grid-copycenter" id="copycenter-grid">
+              <!-- Grid items injected dynamically by index.js -->
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+    </main>
+
+    <!-- Toast Notification Overlay -->
+    <div class="toast-container" id="toast-container"></div>
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
