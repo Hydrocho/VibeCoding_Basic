@@ -354,6 +354,22 @@ const slidesData = [
   },
   {
     "slide_index": 42,
+    "title": "Antigravity - Live Server 설치",
+    "section": "Idea Canvas 앱 제작",
+    "desc": "Antigravity IDE의 확장 기능 마켓플레이스에서 Live Server를 검색하여 설치합니다.\n1. 좌측 확장 기능(Extensions) 아이콘 클릭\n2. 'Live Server' 입력 검색\n3. 리스트에서 Live Server 확인 및 'Install' 클릭하여 설치 진행",
+    "actions": [],
+    "tip": "Live Server는 작성 중인 HTML, CSS, JS 코드를 로컬 웹 서버로 띄워 실시간으로 변경 사항을 브라우저에 확인해 볼 수 있게 돕는 필수 개발 도구입니다."
+  },
+  {
+    "slide_index": 43,
+    "title": "Antigravity - Live Server 실행",
+    "section": "Idea Canvas 앱 제작",
+    "desc": "설치된 Live Server를 사용해 내 HTML 파일을 로컬 웹 서버로 실행합니다.\n1. 우측 하단의 'Go Live' 클릭 또는 index.html 파일 우클릭\n2. 'Open with Live Server' 클릭\n3. 브라우저 창에서 로컬 서버 작동 상태 확인",
+    "actions": [],
+    "tip": "Live Server로 열린 브라우저 창은 코드를 수정하고 저장할 때마다 페이지가 자동으로 새로고침(Live Reload)되어 개발 속도가 매우 빨라집니다."
+  },
+  {
+    "slide_index": 44,
     "title": "“Idea Canvas” 주요 기능 (1)",
     "section": "Idea Canvas 앱 제작",
     "desc": "실시간으로 아이디어를 포스트잇 형태로 작성하고 공유할 수 있는 핵심 보드 화면을 구성합니다.",
@@ -361,7 +377,7 @@ const slidesData = [
     "tip": "Supabase Realtime 또는 웹소켓을 연동하여 다른 사람이 추가한 메모도 새로고침 없이 실시간으로 화면에 렌더링되게 만듭니다."
   },
   {
-    "slide_index": 43,
+    "slide_index": 45,
     "title": "“Idea Canvas” 주요 기능 (2)",
     "section": "Idea Canvas 앱 제작",
     "desc": "생성된 아이디어 보드 화면을 다른 기기(태블릿, 모바일)나 학생들과 편리하게 공유할 수 있도록 QR 코드를 화면에 표시하고 공유 링크를 생성합니다.",
@@ -369,7 +385,7 @@ const slidesData = [
     "tip": "무료 QR 코드 생성 API나 라이브러리를 사용해 웹앱 내에서 동적으로 현재 보드의 URL을 QR 이미지로 렌더링해 줍니다."
   },
   {
-    "slide_index": 44,
+    "slide_index": 46,
     "title": "“Idea Canvas” 주요 기능 (3)",
     "section": "Idea Canvas 앱 제작",
     "desc": "교사가 작성된 전체 아이디어 목록을 모니터링하고, 메모를 관리(정렬, 삭제 등)할 수 있는 관리자 화면을 구성합니다.",
@@ -377,7 +393,7 @@ const slidesData = [
     "tip": "로그인한 사용자의 역할(Role)이나 이메일 주소를 체크하여 교사인 경우에만 관리 버튼과 대시보드가 보이도록 권한을 통제합니다."
   },
   {
-    "slide_index": 45,
+    "slide_index": 47,
     "title": "주요 기능 (1) 로그인 & 가입",
     "section": "스마트 칭찬 노트 앱 제작",
     "desc": "학생과 교사가 개별 회원 가입을 하고 개인 계정별로 데이터 공간에 로그인해 접속하는 기능을 구현합니다.",
@@ -385,7 +401,7 @@ const slidesData = [
     "tip": "수파베이스에서 내장 제공하는 Email Auth 솔루션을 차용해 계정별 보안 접근을 안전하게 관리합니다."
   },
   {
-    "slide_index": 46,
+    "slide_index": 48,
     "title": "주요 기능 (2) 아바타 & 펫 뽑기",
     "section": "스마트 칭찬 노트 앱 제작",
     "desc": "교실 활동에 기여해 모은 칭찬 포인트를 소모해 랜덤으로 아바타나 동물을 수집하는 게임 요소를 구현합니다.",
@@ -393,7 +409,7 @@ const slidesData = [
     "tip": "학생들이 웹앱에 흥미를 느끼고 더 적극적으로 참여할 수 있도록 돕는 게이미피케이션(Gamification) 요소입니다."
   },
   {
-    "slide_index": 47,
+    "slide_index": 49,
     "title": "주요 기능 (3) 교사용 대시보드",
     "section": "스마트 칭찬 노트 앱 제작",
     "desc": "교사는 전체 학생들의 칭찬 내역 확인, 점수별 랭킹 보기, 수기 점수 조정이 가능한 통합 통계 대시보드를 운용합니다.",
@@ -401,7 +417,7 @@ const slidesData = [
     "tip": "대시보드는 교사의 피드백 시간을 획기적으로 줄여주며 효율적인 모둠 관리를 가능하게 합니다."
   },
   {
-    "slide_index": 48,
+    "slide_index": 50,
     "title": "주요 기능 (4) 실시간 DB 운영",
     "section": "스마트 칭찬 노트 앱 제작",
     "desc": "Supabase와 실시간 통신하여 데이터를 유지합니다. 새로고침해도 학생들의 정보가 휘발되지 않도록 제어합니다.",
