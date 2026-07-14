@@ -4,7 +4,7 @@ const slidesData = [
     "slide_index": 1,
     "title": "바이브 코딩 - 오프닝",
     "section": "준비하기",
-    "desc": "교사가 직접 설계하는 맞춤형 교실. 명인중학교 교사 조광근.",
+    "desc": "교사가 직접 설계하는 맞춤형 교실.",
     "actions": [],
     "tip": "Antigravity IDE와 Supabase를 활용하여 교사가 개발 지식 없이도 단 몇 분만에 나만의 스마트 칭찬 노트를 제작하고 배포할 수 있는 실습 가이드입니다."
   },
