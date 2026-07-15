@@ -511,7 +511,9 @@ function buildTOC() {
       idxSpan.textContent = String(slide.slide_index).padStart(2, '0');
       
       const titleSpan = document.createElement('span');
-      titleSpan.textContent = slide.title.replace(/^(Antigravity|GitHub|Supabase|웹앱과|주요) /, ''); // strip tags to keep it clean
+      titleSpan.textContent = slide.title
+        .replace(/^(Antigravity|GitHub|Supabase|웹앱과|주요) /, '') // strip tags to keep it clean
+        .replace(/^-\s*/, ''); // remove leading dash and spaces
       
       item.appendChild(idxSpan);
       item.appendChild(titleSpan);

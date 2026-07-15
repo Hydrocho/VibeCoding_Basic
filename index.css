@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Fira+Code:wght@400;500;600&display=swap');
 
 :root {
-  --bg-main: hsl(224, 25%, 6%);
-  --bg-sidebar: hsl(224, 25%, 10%);
-  --bg-card: hsla(224, 25%, 14%, 0.7);
-  --bg-card-hover: hsla(224, 25%, 18%, 0.9);
-  --border-color: hsla(224, 25%, 22%, 0.5);
+  --bg-main: hsl(38, 11%, 91%);        /* 중앙 슬라이드 뷰포트 배경 (#EAE8E4) */
+  --bg-sidebar: hsl(36, 25%, 97%);     /* 좌/우 패널 및 탑바 배경 (#FAF8F5) */
+  --bg-card: hsl(0, 0%, 100%);         /* 순백색 카드 (#FFFFFF) */
+  --bg-card-hover: hsl(36, 15%, 92%);  /* 웜 크림 호버 피드백 (#EDE8E2) */
+  --border-color: hsla(38, 10%, 82%, 0.9); /* 정밀한 베이지 회색 경계선 */
   
-  --primary: hsl(263, 90%, 66%);
-  --primary-glow: hsla(263, 90%, 66%, 0.15);
-  --secondary: hsl(316, 88%, 61%);
-  --accent: hsl(190, 90%, 50%);
-  --success: hsl(145, 80%, 50%);
+  --primary: hsl(156, 40%, 15%);      /* dark forest green (#1A362B) */
+  --primary-glow: hsla(156, 40%, 15%, 0.08); /* light green glow for active items */
+  --secondary: hsl(345, 70%, 30%);    /* deep wine red/burgundy (#821A2D) */
+  --accent: hsl(38, 12%, 84%);        /* warm sand/beige accent (#DDD9D4) */
+  --success: hsl(142, 60%, 25%);      /* forest green success color */
   
-  --text-primary: hsl(220, 20%, 97%);
-  --text-secondary: hsl(220, 12%, 80%);
-  --text-muted: hsl(220, 10%, 55%);
+  --text-primary: hsl(30, 6%, 15%);    /* dark charcoal/brown (#272522) */
+  --text-secondary: hsl(30, 4%, 35%);  /* medium charcoal/brown (#5A5652) */
+  --text-muted: hsl(30, 4%, 55%);      /* light warm gray/brown (#8E8883) */
   
   --sidebar-width: 320px;
   --header-height: 70px;
@@ -213,7 +213,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: hsla(224, 25%, 6%, 0.8);
+  background-color: hsla(36, 25%, 97%, 0.8);
   backdrop-filter: blur(10px);
   z-index: 50;
 }
@@ -264,7 +264,7 @@ body {
 .tab-btn.active {
   background-color: var(--bg-card-hover);
   color: var(--text-primary);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 /* Workspace Panels */
@@ -302,23 +302,22 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: hsl(224, 25%, 4%);
+  background-color: var(--bg-main);
   padding: 25px;
   position: relative;
 }
 
 .slide-wrapper {
   width: 100%;
-  height: 100%;
   max-width: 960px;
-  max-height: 540px;
+  max-height: calc(100vh - 200px);
   aspect-ratio: 16/9;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
   border: 1px solid var(--border-color);
   position: relative;
-  background-color: #000;
+  background-color: var(--bg-card);
 }
 
 .slide-image {
@@ -564,9 +563,10 @@ body {
 
 .card-content-wrapper {
   display: flex;
-  background-color: hsl(224, 25%, 5%);
+  background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
   overflow: hidden;
 }
 
@@ -587,10 +587,10 @@ body {
 }
 
 .copy-btn {
-  background-color: hsl(224, 25%, 12%);
+  background-color: var(--border-color);
   border: none;
   border-left: 1px solid var(--border-color);
-  color: var(--text-muted);
+  color: var(--text-secondary);
   width: 44px;
   height: 44px;
   display: flex;
@@ -652,7 +652,7 @@ body {
 }
 
 .toast {
-  background: linear-gradient(135deg, hsl(224, 25%, 15%) 0%, hsl(224, 25%, 10%) 100%);
+  background: linear-gradient(135deg, hsl(36, 25%, 98%) 0%, hsl(36, 20%, 94%) 100%);
   border-left: 4px solid var(--primary);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
@@ -663,7 +663,7 @@ body {
   font-family: var(--font-display);
   font-size: 0.9rem;
   font-weight: 500;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
   gap: 12px;
@@ -689,11 +689,13 @@ body {
 
 /* Floating Helper Info */
 .info-card {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(316, 88, 61, 0.1) 100%);
-  border: 1px dashed var(--primary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--primary);
   border-radius: 12px;
   padding: 20px;
   margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .info-card h4 {
@@ -785,7 +787,7 @@ body {
 .custom-action-input {
   width: 100%;
   padding: 10px 14px;
-  background-color: hsl(224, 25%, 5%);
+  background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   color: var(--text-primary);
