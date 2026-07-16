@@ -578,6 +578,31 @@ function buildCopyCenter() {
   `;
   copyCenterGrid.appendChild(zipCard);
 
+  // GrowthNote ZIP Link Card - Full Width (Fixed URL)
+  const growthZipCard = document.createElement('div');
+  growthZipCard.className = 'copy-card grid-fullwidth';
+  const growthZipUrl = 'https://github.com/Hydrocho/VibeCoding_Basic/raw/main/data/GrowthNoth.zip';
+  
+  growthZipCard.innerHTML = `
+    <div class="card-header">
+      <span class="card-tag link" style="background-color: rgba(16, 185, 129, 0.15); color: var(--success);">GrowthNote ZIP</span>
+      <div class="card-title">GrowthNote 실습 자료 다운로드 (.ZIP)</div>
+    </div>
+    <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom: 8px;">
+      교실 수업에 사용될 GrowthNote 실습 자료 압축 파일입니다. 아래 링크 주소를 복사하여 배포하거나 직접 다운로드할 수 있습니다.
+    </p>
+    <div class="card-content-wrapper">
+      <div class="card-content-text" id="cc-growth-zip-url" style="font-size: 0.85rem;">${growthZipUrl}</div>
+      <button class="copy-btn" onclick="copyTextFromElement('cc-growth-zip-url', 'GrowthNote ZIP 다운로드 링크')" title="링크 복사">
+        <i data-feather="copy"></i>
+      </button>
+      <button class="copy-btn" onclick="window.open(document.getElementById('cc-growth-zip-url').textContent, '_blank')" title="직접 다운로드" style="border-left: 1px solid var(--border-color);">
+        <i data-feather="download"></i>
+      </button>
+    </div>
+  `;
+  copyCenterGrid.appendChild(growthZipCard);
+
   // B. Standard card items for links and commands
   slidesData.forEach(slide => {
     slide.actions.forEach(action => {
