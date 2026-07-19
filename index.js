@@ -436,7 +436,7 @@ let autoplayTimeElapsed = 0;
 let activeTab = 'presentation';
 let customUsername = '';
 let customEmail = '';
-let customRepoName = 'idea-canvas';
+let customRepoName = 'IdeaCanvas';
 
 // DOM Elements
 const slideImg = document.getElementById('slide-img');
@@ -504,6 +504,7 @@ function buildTOC() {
       item.onclick = () => {
         if (autoplayActive) toggleAutoplay(); // stop autoplay on manual navigation
         goToSlide(slide.slide_index - 1);
+        switchTab('presentation');
       };
       
       const idxSpan = document.createElement('span');
@@ -603,11 +604,46 @@ function buildCopyCenter() {
   `;
   copyCenterGrid.appendChild(growthZipCard);
 
+  // GitHub Pages Dynamic URL Card - Full Width
+  const ccPageCard = document.createElement('div');
+  ccPageCard.className = 'copy-card grid-fullwidth';
+  const ccPageUrl = `https://${(customUsername || 'username').toLowerCase()}.github.io/${customRepoName || 'repository'}/`;
+  
+  ccPageCard.innerHTML = `
+    <div class="card-header">
+      <span class="card-tag link">LINK</span>
+      <div class="card-title">교사 깃허브 페이지 예시 주소</div>
+    </div>
+    <div style="margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 12px;">
+      <div>
+        <label style="font-size: 0.78rem; color: var(--text-secondary); display: block; margin-bottom: 5px; font-weight: 500;">GitHub 아이디 입력:</label>
+        <input type="text" id="input-cc-page-username" placeholder="GitHub 아이디 (예: gildong)" value="${customUsername}" class="custom-action-input" style="width: 100%; box-sizing: border-box;" oninput="updatePageUsername(this.value)">
+      </div>
+      <div>
+        <label style="font-size: 0.78rem; color: var(--text-secondary); display: block; margin-bottom: 5px; font-weight: 500;">저장소 이름 입력:</label>
+        <input type="text" id="input-cc-page-repo" placeholder="저장소 이름 (예: IdeaCanvas)" value="${customRepoName}" class="custom-action-input" style="width: 100%; box-sizing: border-box;" oninput="updatePageRepo(this.value)">
+      </div>
+    </div>
+    <div class="card-content-wrapper">
+      <div class="card-content-text" id="cc-action-25" style="font-size: 0.85rem;">${ccPageUrl}</div>
+      <button class="copy-btn" id="btn-copy-cc-pageurl" onclick="copyTextFromElement('cc-action-25', '교사 깃허브 페이지 예시 주소')" title="링크 복사">
+        <i data-feather="copy"></i>
+      </button>
+      <button class="copy-btn" id="btn-visit-cc-pageurl" onclick="window.open(document.getElementById('cc-action-25').textContent, '_blank')" title="새 창으로 이동" style="border-left: 1px solid var(--border-color);">
+        <i data-feather="external-link"></i>
+      </button>
+    </div>
+  `;
+  copyCenterGrid.appendChild(ccPageCard);
+
   // B. Standard card items for links and commands
   slidesData.forEach(slide => {
     slide.actions.forEach(action => {
       // Skip the large SQL action since we already created a special full-width card for it
       if (action.type === 'sql') return;
+      
+      // Skip Slide 25 since we already created a special full-width dynamic card for it above
+      if (slide.slide_index === 25) return;
       
       const card = document.createElement('div');
       card.className = 'copy-card';
@@ -618,9 +654,6 @@ function buildCopyCenter() {
       if (action.type === 'cmd') tagLabel = 'Command';
       
       let actionValue = action.value;
-      if (slide.slide_index === 25) {
-        actionValue = `https://${(customUsername || 'username').toLowerCase()}.github.io/${customRepoName || 'repository'}/`;
-      }
       
       const isLink = action.type === 'link';
       card.innerHTML = `
@@ -774,7 +807,7 @@ function renderSlideActions(slide) {
           </div>
           <div>
             <label style="font-size: 0.75rem; color: var(--text-muted); display: block;">저장소 이름 입력:</label>
-            <input type="text" id="input-page-repo" placeholder="저장소 이름 (예: idea-canvas)" value="${customRepoName}" class="custom-action-input" oninput="updatePageRepo(this.value)">
+            <input type="text" id="input-page-repo" placeholder="저장소 이름 (예: IdeaCanvas)" value="${customRepoName}" class="custom-action-input" oninput="updatePageRepo(this.value)">
           </div>
         </div>
         <div class="card-content-wrapper" style="margin-top: 10px;">
@@ -1034,6 +1067,9 @@ function updatePageUsername(value) {
   const pageUsernameInput = document.getElementById('input-page-username');
   if (pageUsernameInput) pageUsernameInput.value = customUsername;
 
+  const ccPageUsernameInput = document.getElementById('input-cc-page-username');
+  if (ccPageUsernameInput) ccPageUsernameInput.value = customUsername;
+
   // Sync to slide 13 command display if visible
   const gitNameCmd = document.getElementById('slide-act-val-12-0');
   if (gitNameCmd) {
@@ -1070,6 +1106,9 @@ function updatePageRepo(value) {
   // Sync page repo input
   const pageRepoInput = document.getElementById('input-page-repo');
   if (pageRepoInput) pageRepoInput.value = customRepoName;
+
+  const ccPageRepoInput = document.getElementById('input-cc-page-repo');
+  if (ccPageRepoInput) ccPageRepoInput.value = customRepoName;
 
   // Update URL displays
   updatePageUrlDisplay();
