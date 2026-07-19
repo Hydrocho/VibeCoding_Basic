@@ -581,7 +581,7 @@ function buildCopyCenter() {
   // GrowthNote ZIP Link Card - Full Width (Fixed URL)
   const growthZipCard = document.createElement('div');
   growthZipCard.className = 'copy-card grid-fullwidth';
-  const growthZipUrl = 'https://github.com/Hydrocho/VibeCoding_Basic/raw/main/data/GrowthNoth.zip';
+  const growthZipUrl = 'https://github.com/Hydrocho/VibeCoding_Basic/raw/main/data/GrowthNote.zip';
   
   growthZipCard.innerHTML = `
     <div class="card-header">
