@@ -741,7 +741,7 @@ function buildCopyCenter() {
       <div class="card-title" style="font-weight: 700; font-size: 1.05rem;">GitHub에 이미 존재하는 레파지토리로 배포(연결)하고 싶을 때</div>
     </div>
     <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom: 12px; line-height: 1.6;">
-      GitHub에 이미 존재하는 레파지토리로 배포(연결)하고 싶을 때는 프로젝트 폴더에서 터미널을 열고 아래 명령어 두 줄만 기억해 주시면 됩니다.
+      GitHub에 이미 존재하는 레파지토리로 배포(연결)하고 싶을 때는 프로젝트 폴더에서 터미널(git bash)을 열고 아래 명령어를 입력해주세요.
     </p>
     
     <div style="margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; padding: 15px; background-color: var(--bg-sidebar); border-radius: 8px; border: 1px solid var(--border-color);">
