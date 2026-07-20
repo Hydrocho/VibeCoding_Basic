@@ -228,30 +228,6 @@ const slidesData = [
   },
   {
     "slide_index": 24,
-    "title": "GitHub에 이미 존재하는 레파지토리로 배포(연결)하고 싶을 때",
-    "section": "Git & GitHub 연동",
-    "desc": "GitHub에 이미 존재하는 레파지토리로 배포(연결)하고 싶을 때는 프로젝트 폴더에서 터미널을 열고 아래 명령어 두 줄만 기억해 주시면 됩니다.\n\n1단계: 기존 저장소 연결하기\n원격 저장소(GitHub) 주소를 로컬 프로젝트에 등록합니다.\n\n2단계: 코드 올리기 (선택)\n상황에 맞게 두 가지 방법 중 하나를 사용하시면 됩니다.\n\n방법 A. 기존 원격 저장소 내용을 무시하고 내 컴퓨터 코드로 완전히 덮어쓰기 (추천)\n방법 B. 기존 원격 저장소에 있는 파일들과 내 코드를 합쳐서 올리기",
-    "actions": [
-      {
-        "type": "cmd",
-        "label": "1단계: 기존 저장소 연결 명령어 복사",
-        "value": "git remote add origin https://github.com/<본인_GitHub_ID>/<레파지토리_이름>.git"
-      },
-      {
-        "type": "cmd",
-        "label": "2단계 (방법 A): 덮어쓰기 명령어 복사",
-        "value": "git push -u origin main --force"
-      },
-      {
-        "type": "cmd",
-        "label": "2단계 (방법 B): 파일 합쳐서 올리기 명령어 복사",
-        "value": "git pull origin main --rebase\ngit push -u origin main"
-      }
-    ],
-    "tip": "GitHub에 레포지토리를 먼저 생성해 두어 로컬에서 push 오류(non-fast-forward 등)가 날 때 유용한 해결법입니다."
-  },
-  {
-    "slide_index": 25,
     "title": "GitHub Pages 웹 주소 활성화 방법",
     "section": "Git & GitHub 연동",
     "desc": "코딩된 정적 웹앱을 외부 접속용 주소로 배포합니다.\n1. GitHub 레포 Settings 탭 클릭\n2. Pages 카테고리 클릭\n3. Build and deployment - Branch를 None에서 main으로 토글 변경\n4. 우측 Save 클릭 후 2~3분간 배포 완료 대기",
@@ -265,7 +241,7 @@ const slidesData = [
     "tip": "이 기능은 무료로 내 HTML/JS 파일을 상용 웹서버처럼 호스팅할 수 있게 도와주는 서비스입니다."
   },
   {
-    "slide_index": 26,
+    "slide_index": 25,
     "title": "GitHub Pages 배포 주소 확인",
     "section": "Git & GitHub 연동",
     "desc": "빌드가 끝나면 상단에 활성화 완료 링크가 생성됩니다. 해당 주소를 눌러 웹 사이트 작동 상태를 최종 점검합니다.",
@@ -279,7 +255,7 @@ const slidesData = [
     "tip": "완성된 주소 형식은 보통 https://[아이디].github.io/[레포지토리이름]/ 형태입니다."
   },
   {
-    "slide_index": 27,
+    "slide_index": 26,
     "title": "Supabase 데이터베이스 가입",
     "section": "Supabase 데이터베이스 구축",
     "desc": "칭찬 내용 및 학생 정보 저장을 처리하기 위해, 무료 클라우드 백엔드 Supabase 사이트로 이동해 계정을 만듭니다.",
@@ -293,7 +269,7 @@ const slidesData = [
     "tip": "Supabase는 오픈소스 Firebase 대안으로 관계형 PostgreSQL DB를 매우 손쉽게 운영할 수 있도록 돕습니다."
   },
   {
-    "slide_index": 28,
+    "slide_index": 27,
     "title": "Supabase - 깃허브 연동 로그인",
     "section": "Supabase 데이터베이스 구축",
     "desc": "웹 우측 상단 Sign in을 눌러 Sign In with GitHub를 활용해 간편 연결 가입합니다.",
@@ -307,7 +283,7 @@ const slidesData = [
     "tip": "이미 만들어 둔 깃허브 세션을 이용하므로 별도의 추가 비밀번호 설정 없이 가입이 완료됩니다."
   },
   {
-    "slide_index": 29,
+    "slide_index": 28,
     "title": "Supabase - 대시보드 입장",
     "section": "Supabase 데이터베이스 구축",
     "desc": "로그인이 끝나면 수파베이스 메인 대시보드로 이동할 준비를 하고 관리자 화면으로 들어갑니다.",
@@ -315,7 +291,7 @@ const slidesData = [
     "tip": "여러 프로젝트 데이터베이스의 모니터링 및 설정이 가능한 홈화면입니다."
   },
   {
-    "slide_index": 30,
+    "slide_index": 29,
     "title": "Supabase - 새 프로젝트 생성 시작",
     "section": "Supabase 데이터베이스 구축",
     "desc": "가운데 표시되는 '+ New Project' 버튼을 눌러 실습용 DB 프로젝트 설정을 개시합니다.",
@@ -323,7 +299,7 @@ const slidesData = [
     "tip": "수파베이스는 무료 플랜으로 최대 2개의 활성 프로젝트를 상시 운영할 수 있습니다."
   },
   {
-    "slide_index": 31,
+    "slide_index": 30,
     "title": "Supabase - 프로젝트 상세 설정",
     "section": "Supabase 데이터베이스 구축",
     "desc": "프로젝트 이름을 idea-canvas로 적고 암호를 입력합니다. 아래로 스크롤하여 계속 진행합니다.",
@@ -337,7 +313,7 @@ const slidesData = [
     "tip": "DB 비밀번호는 외부 해킹 방지를 위해 문자/숫자/특수기호 혼합 형식의 영문으로 작성하여 안전하게 메모해 둡니다."
   },
   {
-    "slide_index": 32,
+    "slide_index": 31,
     "title": "Supabase - 프로젝트 생성 완료",
     "section": "Supabase 데이터베이스 구축",
     "desc": "설정을 확인한 뒤 'Create new project' 녹색 버튼을 누릅니다. 시스템 프로비저닝 완료까지 잠시 기다립니다.",
@@ -345,7 +321,7 @@ const slidesData = [
     "tip": "클라우드 내에 나만의 전용 PostgreSQL 가상 리눅스 인스턴스가 셋팅되는 과정이므로 약 1분 정도가 걸립니다."
   },
   {
-    "slide_index": 33,
+    "slide_index": 32,
     "title": "웹앱과 DB 연동 - 대시보드",
     "section": "Supabase 데이터베이스 구축",
     "desc": "생성 완료된 수파베이스 프로젝트의 연동 키값 확인을 위해 프로젝트 메인 홈으로 포커스를 둡니다.",
@@ -353,7 +329,7 @@ const slidesData = [
     "tip": "대시보드 메인에서 현재 DB 서버의 활성 세션 수, 디스크 사용량 등을 한눈에 확인 가능합니다."
   },
   {
-    "slide_index": 34,
+    "slide_index": 33,
     "title": "웹앱과 DB 연동 - Org 선택",
     "section": "Supabase 데이터베이스 구축",
     "desc": "좌측 대시보드 메뉴 중에서 본인의 상위 Organization(기관) 탭 폴더 영역을 선택해 줍니다.",
@@ -361,7 +337,7 @@ const slidesData = [
     "tip": "기관별로 여러 개발용 프로젝트를 분류하여 관리할 수 있는 계층 구조입니다."
   },
   {
-    "slide_index": 35,
+    "slide_index": 34,
     "title": "웹앱과 DB 연동 - 프로젝트 선택",
     "section": "Supabase 데이터베이스 구축",
     "desc": "생성 작업이 끝난 목록의 'idea-canvas' 프로젝트 카드를 클릭하여 셋팅 페이지에 접속합니다.",
@@ -369,7 +345,7 @@ const slidesData = [
     "tip": "목록에 프로젝트 상태가 Active로 정상 변경된 것을 확인한 후 들어가야 합니다."
   },
   {
-    "slide_index": 36,
+    "slide_index": 35,
     "title": "웹앱과 DB 연동 - API URL 복사",
     "section": "Supabase 데이터베이스 구축",
     "desc": "프로젝트 설정 -> Integrations -> Data API 카테고리에 있는 내 서버 고유 API URL 주소를 복사해 둡니다.",
@@ -377,7 +353,7 @@ const slidesData = [
     "tip": "이 URL은 웹앱 클라이언트가 데이터를 보낼 때 사용할 통신 경로가 됩니다."
   },
   {
-    "slide_index": 37,
+    "slide_index": 36,
     "title": "웹앱과 DB 연동 - API URL 붙여넣기",
     "section": "Supabase 데이터베이스 구축",
     "desc": "웹앱 폴더의 `supabase_config.js`를 열어 `SUPABASE_URL`에 복사한 주소를 넣어 셋팅합니다.",
@@ -385,7 +361,7 @@ const slidesData = [
     "tip": ".co 도메인 뒷부분의 불필요한 하위 디렉토리 스트링이 중복 삽입되지 않도록 정확히 도메인까지만 기입해 주세요."
   },
   {
-    "slide_index": 38,
+    "slide_index": 37,
     "title": "웹앱과 DB 연동 - API Key 복사",
     "section": "Supabase 데이터베이스 구축",
     "desc": "Project Settings -> API 메뉴로 이동해 anon public key(Publishable Key)를 찾고 키 복사를 수행합니다.",
@@ -393,7 +369,7 @@ const slidesData = [
     "tip": "외부 누출에 안전한 읽기/쓰기 권한용 기본 암호키로, 웹브라우저 클라이언트 코드에 직접 담길 데이터입니다."
   },
   {
-    "slide_index": 39,
+    "slide_index": 38,
     "title": "웹앱과 DB 연동 - API Key 붙여넣기",
     "section": "Supabase 데이터베이스 구축",
     "desc": "`supabase_config.js`에서 복사한 API Key를 `SUPABASE_KEY`에 대입하여 파일의 최종 저장을 완료합니다.",
@@ -401,7 +377,7 @@ const slidesData = [
     "tip": "이제 웹앱이 로드되는 순간 지정한 수파베이스 실시간 DB 서버 세션으로 직접 데이터 쓰기 요청이 가능해집니다."
   },
   {
-    "slide_index": 40,
+    "slide_index": 39,
     "title": "Supabase SQL Editor 입장",
     "section": "Supabase 데이터베이스 구축",
     "desc": "데이터를 저장할 테이블 구조를 선언해 주기 위해 수파베이스 좌측 사이드바의 SQL Editor 탭으로 들어갑니다.",
@@ -409,7 +385,7 @@ const slidesData = [
     "tip": "SQL 에디터에서는 텍스트 쿼리를 입력해 클릭 몇 번으로 테이블을 설계하고 기본 데이터를 생성할 수 있습니다."
   },
   {
-    "slide_index": 41,
+    "slide_index": 40,
     "title": "Supabase SQL 실행 및 테이블 생성",
     "section": "Supabase 데이터베이스 구축",
     "desc": "IDE 작업 공간에 자동 생성된 setup.sql 파일의 코드를 복사하여, SQL Query 에디터 창에 붙여넣고 Run을 누릅니다. Success가 나오는지 확인합니다.",
@@ -417,7 +393,7 @@ const slidesData = [
     "tip": "쿼리가 정상 처리되면 하단 터미널 콘솔 로그에 'Success'라는 메시지가 출력되며 테이블 배치가 완료됩니다."
   },
   {
-    "slide_index": 42,
+    "slide_index": 41,
     "title": "수파베이스 - 회원 가입 기능 구현",
     "section": "Supabase 데이터베이스 구축",
     "desc": "개발 테스트 편의를 위해 신규 이메일 가입 시 메일 인증을 즉각 통과하도록 설정을 우회합니다.\n1. Supabase 관리 메뉴 Authentication -> Providers -> Email 선택\n2. 'Confirm email' 체크 옵션을 비활성화(OFF)\n3. 하단의 'Save changes'를 눌러 저장합니다.",
@@ -425,7 +401,7 @@ const slidesData = [
     "tip": "인증 옵션을 끄지 않으면 가입한 이메일 편지함으로 가서 매번 인증 확인을 눌러야 하므로, 실습 전 꼭 확인하세요."
   },
   {
-    "slide_index": 43,
+    "slide_index": 42,
     "title": "Antigravity - Live Server 설치",
     "section": "Live Server 실행",
     "desc": "Antigravity IDE의 확장 기능 마켓플레이스에서 Live Server를 검색하여 설치합니다.\n1. 좌측 확장 기능(Extensions) 아이콘 클릭\n2. 'Live Server' 입력 검색\n3. 리스트에서 Live Server 확인 및 'Install' 클릭하여 설치 진행",
@@ -433,7 +409,7 @@ const slidesData = [
     "tip": "Live Server는 작성 중인 HTML, CSS, JS 코드를 로컬 웹 서버로 띄워 실시간으로 변경 사항을 브라우저에 확인해 볼 수 있게 돕는 필수 개발 도구입니다."
   },
   {
-    "slide_index": 44,
+    "slide_index": 43,
     "title": "Antigravity - Live Server 실행",
     "section": "Live Server 실행",
     "desc": "설치된 Live Server를 사용해 내 HTML 파일을 로컬 웹 서버로 실행합니다.\n1. 우측 하단의 'Go Live' 클릭 또는 index.html 파일 우클릭\n2. 'Open with Live Server' 클릭\n3. 브라우저 창에서 로컬 서버 작동 상태 확인",
@@ -441,7 +417,7 @@ const slidesData = [
     "tip": "Live Server로 열린 브라우저 창은 코드를 수정하고 저장할 때마다 페이지가 자동으로 새로고침(Live Reload)되어 개발 속도가 매우 빨라집니다."
   },
   {
-    "slide_index": 45,
+    "slide_index": 44,
     "title": "“Idea Canvas” 주요 기능 (1)",
     "section": "Idea Canvas 앱 제작",
     "desc": "실시간으로 아이디어를 포스트잇 형태로 작성하고 공유할 수 있는 핵심 보드 화면을 구성합니다.",
@@ -449,7 +425,7 @@ const slidesData = [
     "tip": "Supabase Realtime 또는 웹소켓을 연동하여 다른 사람이 추가한 메모도 새로고침 없이 실시간으로 화면에 렌더링되게 만듭니다."
   },
   {
-    "slide_index": 46,
+    "slide_index": 45,
     "title": "“Idea Canvas” 주요 기능 (2)",
     "section": "Idea Canvas 앱 제작",
     "desc": "생성된 아이디어 보드 화면을 다른 기기(태블릿, 모바일)나 학생들과 편리하게 공유할 수 있도록 QR 코드를 화면에 표시하고 공유 링크를 생성합니다.",
@@ -457,7 +433,7 @@ const slidesData = [
     "tip": "무료 QR 코드 생성 API나 라이브러리를 사용해 웹앱 내에서 동적으로 현재 보드의 URL을 QR 이미지로 렌더링해 줍니다."
   },
   {
-    "slide_index": 47,
+    "slide_index": 46,
     "title": "“Idea Canvas” 주요 기능 (3)",
     "section": "Idea Canvas 앱 제작",
     "desc": "교사가 작성된 전체 아이디어 목록을 모니터링하고, 메모를 관리(정렬, 삭제 등)할 수 있는 관리자 화면을 구성합니다.",
@@ -465,7 +441,7 @@ const slidesData = [
     "tip": "로그인한 사용자의 역할(Role)이나 이메일 주소를 체크하여 교사인 경우에만 관리 버튼과 대시보드가 보이도록 권한을 통제합니다."
   },
   {
-    "slide_index": 48,
+    "slide_index": 47,
     "title": "주요 기능 (1) 로그인 & 가입",
     "section": "스마트 칭찬 노트 앱 제작",
     "desc": "학생과 교사가 개별 회원 가입을 하고 개인 계정별로 데이터 공간에 로그인해 접속하는 기능을 구현합니다.",
@@ -473,7 +449,7 @@ const slidesData = [
     "tip": "수파베이스에서 내장 제공하는 Email Auth 솔루션을 차용해 계정별 보안 접근을 안전하게 관리합니다."
   },
   {
-    "slide_index": 49,
+    "slide_index": 48,
     "title": "주요 기능 (2) 아바타 & 펫 뽑기",
     "section": "스마트 칭찬 노트 앱 제작",
     "desc": "교실 활동에 기여해 모은 칭찬 포인트를 소모해 랜덤으로 아바타나 동물을 수집하는 게임 요소를 구현합니다.",
@@ -481,7 +457,7 @@ const slidesData = [
     "tip": "학생들이 웹앱에 흥미를 느끼고 더 적극적으로 참여할 수 있도록 돕는 게이미피케이션(Gamification) 요소입니다."
   },
   {
-    "slide_index": 50,
+    "slide_index": 49,
     "title": "주요 기능 (3) 교사용 대시보드",
     "section": "스마트 칭찬 노트 앱 제작",
     "desc": "교사는 전체 학생들의 칭찬 내역 확인, 점수별 랭킹 보기, 수기 점수 조정이 가능한 통합 통계 대시보드를 운용합니다.",
@@ -489,7 +465,7 @@ const slidesData = [
     "tip": "대시보드는 교사의 피드백 시간을 획기적으로 줄여주며 효율적인 모둠 관리를 가능하게 합니다."
   },
   {
-    "slide_index": 51,
+    "slide_index": 50,
     "title": "주요 기능 (4) 실시간 DB 운영",
     "section": "스마트 칭찬 노트 앱 제작",
     "desc": "Supabase와 실시간 통신하여 데이터를 유지합니다. 새로고침해도 학생들의 정보가 휘발되지 않도록 제어합니다.",
@@ -603,7 +579,7 @@ function buildCopyCenter() {
   copyCenterGrid.innerHTML = '';
   
   // A. Special card for Slide 40 (SQL DB Schema Creation script) - Full Width
-  const sqlSlide = slidesData.find(s => s.slide_index === 41);
+  const sqlSlide = slidesData.find(s => s.slide_index === 40);
   const sqlAction = sqlSlide ? sqlSlide.actions.find(a => a.type === 'sql') : null;
   if (sqlAction) {
     const card = document.createElement('div');
@@ -697,11 +673,11 @@ function buildCopyCenter() {
       </div>
     </div>
     <div class="card-content-wrapper">
-      <div class="card-content-text" id="cc-action-26" style="font-size: 0.85rem;">${ccPageUrl}</div>
-      <button class="copy-btn" id="btn-copy-cc-pageurl" onclick="copyTextFromElement('cc-action-26', '교사 깃허브 페이지 예시 주소')" title="링크 복사">
+      <div class="card-content-text" id="cc-action-25" style="font-size: 0.85rem;">${ccPageUrl}</div>
+      <button class="copy-btn" id="btn-copy-cc-pageurl" onclick="copyTextFromElement('cc-action-25', '교사 깃허브 페이지 예시 주소')" title="링크 복사">
         <i data-feather="copy"></i>
       </button>
-      <button class="copy-btn" id="btn-visit-cc-pageurl" onclick="window.open(document.getElementById('cc-action-26').textContent, '_blank')" title="새 창으로 이동" style="border-left: 1px solid var(--border-color);">
+      <button class="copy-btn" id="btn-visit-cc-pageurl" onclick="window.open(document.getElementById('cc-action-25').textContent, '_blank')" title="새 창으로 이동" style="border-left: 1px solid var(--border-color);">
         <i data-feather="external-link"></i>
       </button>
     </div>
@@ -715,7 +691,7 @@ function buildCopyCenter() {
       if (action.type === 'sql') return;
       
       // Skip Slide 25 since we already created a special full-width dynamic card for it above
-      if (slide.slide_index === 26) return;
+      if (slide.slide_index === 25) return;
       
       const card = document.createElement('div');
       card.className = 'copy-card';
@@ -1196,7 +1172,7 @@ function updatePageUrlDisplay() {
   }
   
   // Update Copy Center slide 25 URL element
-  const ccDiv = document.getElementById('cc-action-26');
+  const ccDiv = document.getElementById('cc-action-25');
   if (ccDiv) {
     ccDiv.textContent = pageUrl;
   }
