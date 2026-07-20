@@ -727,6 +727,69 @@ function buildCopyCenter() {
       copyCenterGrid.appendChild(card);
     });
   });
+
+  // C. GitHub Existing Repo Link Card - Full Width (At the very bottom)
+  const ccDeployCard = document.createElement('div');
+  ccDeployCard.className = 'copy-card grid-fullwidth';
+  
+  const initStep1 = `git remote add origin https://github.com/${customUsername || '<본인_GitHub_ID>'}/${customRepoName || '<레파지토리_이름>'}.git`;
+  const initStep2 = `git push -u origin main --force`;
+
+  ccDeployCard.innerHTML = `
+    <div class="card-header">
+      <span class="card-tag cmd" style="background-color: rgba(99, 102, 241, 0.15); color: var(--primary);">GitHub Existing Repo</span>
+      <div class="card-title" style="font-weight: 700; font-size: 1.05rem;">GitHub에 이미 존재하는 레파지토리로 배포(연결)하고 싶을 때</div>
+    </div>
+    <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom: 12px; line-height: 1.6;">
+      GitHub에 이미 존재하는 레파지토리로 배포(연결)하고 싶을 때는 프로젝트 폴더에서 터미널을 열고 아래 명령어 두 줄만 기억해 주시면 됩니다.
+    </p>
+    
+    <div style="margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; padding: 15px; background-color: var(--bg-sidebar); border-radius: 8px; border: 1px solid var(--border-color);">
+      <div>
+        <label style="font-size: 0.78rem; color: var(--text-secondary); display: block; margin-bottom: 5px; font-weight: 600;">GitHub 아이디 입력:</label>
+        <input type="text" id="input-cc-deploy-username" placeholder="GitHub 아이디 (예: Hydrocho)" value="${customUsername}" class="custom-action-input" style="width: 100%; box-sizing: border-box;" oninput="updatePageUsername(this.value)">
+      </div>
+      <div>
+        <label style="font-size: 0.78rem; color: var(--text-secondary); display: block; margin-bottom: 5px; font-weight: 600;">레파지토리 이름 입력:</label>
+        <input type="text" id="input-cc-deploy-repo" placeholder="레파지토리 이름 (예: IdeaCanvas_3)" value="${customRepoName}" class="custom-action-input" style="width: 100%; box-sizing: border-box;" oninput="updatePageRepo(this.value)">
+      </div>
+    </div>
+
+    <!-- Step 1 -->
+    <div style="margin-bottom: 20px;">
+      <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
+        <span style="background-color: var(--primary); color: white; border-radius: 4px; padding: 2px 6px; font-size: 0.75rem;">1단계</span>
+        기존 저장소 연결하기
+      </div>
+      <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; padding-left: 4px;">원격 저장소(GitHub) 주소를 로컬 프로젝트에 등록합니다.</div>
+      <div class="card-content-wrapper">
+        <div class="card-content-text" id="cc-deploy-step1-code" style="font-size: 0.82rem;">${initStep1}</div>
+        <button class="copy-btn" id="btn-copy-cc-deploy-step1" onclick="copyTextFromElement('cc-deploy-step1-code', '기존 저장소 연결 명령어')" title="명령어 복사">
+          <i data-feather="copy"></i>
+        </button>
+      </div>
+      <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 6px; font-style: italic; padding-left: 4px;">
+        (예: git remote add origin https://github.com/Hydrocho/IdeaCanvas_3.git)
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div style="margin-bottom: 5px;">
+      <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
+        <span style="background-color: var(--secondary); color: white; border-radius: 4px; padding: 2px 6px; font-size: 0.75rem;">2단계</span>
+        코드 올리기 (선택)
+      </div>
+      <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; padding-left: 4px;">기존 원격 저장소 내용을 무시하고 내 컴퓨터 코드로 완전히 덮어쓰기</div>
+      <div style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 8px; padding-left: 4px; line-height: 1.4;">기존 GitHub에 들어있는 파일(예: 자동 생성된 README.md 등)이 중요하지 않을 때 사용합니다.</div>
+      <div class="card-content-wrapper">
+        <div class="card-content-text" id="cc-deploy-step2-code" style="font-size: 0.82rem;">${initStep2}</div>
+        <button class="copy-btn" id="btn-copy-cc-deploy-step2" onclick="copyTextFromElement('cc-deploy-step2-code', '코드 덮어쓰기 명령어')" title="명령어 복사">
+          <i data-feather="copy"></i>
+        </button>
+      </div>
+    </div>
+  `;
+  copyCenterGrid.appendChild(ccDeployCard);
 }
 
 // 3. Navigation core function
@@ -1118,6 +1181,9 @@ function updatePageUsername(value) {
   const ccPageUsernameInput = document.getElementById('input-cc-page-username');
   if (ccPageUsernameInput) ccPageUsernameInput.value = customUsername;
 
+  const ccDeployUsernameInput = document.getElementById('input-cc-deploy-username');
+  if (ccDeployUsernameInput) ccDeployUsernameInput.value = customUsername;
+
   // Sync to slide 13 command display if visible
   const gitNameCmd = document.getElementById('slide-act-val-12-0');
   if (gitNameCmd) {
@@ -1146,6 +1212,12 @@ function updatePageUsername(value) {
 
   // Update URL displays
   updatePageUrlDisplay();
+
+  // Update Deploy Step 1 command display
+  const ccDeployStep1 = document.getElementById('cc-deploy-step1-code');
+  if (ccDeployStep1) {
+    ccDeployStep1.textContent = `git remote add origin https://github.com/${customUsername || '<본인_GitHub_ID>'}/${customRepoName || '<레파지토리_이름>'}.git`;
+  }
 }
 
 function updatePageRepo(value) {
@@ -1158,8 +1230,17 @@ function updatePageRepo(value) {
   const ccPageRepoInput = document.getElementById('input-cc-page-repo');
   if (ccPageRepoInput) ccPageRepoInput.value = customRepoName;
 
+  const ccDeployRepoInput = document.getElementById('input-cc-deploy-repo');
+  if (ccDeployRepoInput) ccDeployRepoInput.value = customRepoName;
+
   // Update URL displays
   updatePageUrlDisplay();
+
+  // Update Deploy Step 1 command display
+  const ccDeployStep1 = document.getElementById('cc-deploy-step1-code');
+  if (ccDeployStep1) {
+    ccDeployStep1.textContent = `git remote add origin https://github.com/${customUsername || '<본인_GitHub_ID>'}/${customRepoName || '<레파지토리_이름>'}.git`;
+  }
 }
 
 function updatePageUrlDisplay() {
